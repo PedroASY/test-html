@@ -1,3 +1,13 @@
+:root {
+    --primary-color: rgb(8, 16, 68);
+    --secondary-color: rgb(255, 111, 21);
+    --tertiary-color: rgb(255, 255, 255);
+    --primary-container: rgb(240, 240, 240);
+    --text-color: rgb(33, 33, 33);
+    --secondary-text-color: rgb(33, 33, 33);
+    --primary-border: rgb(221, 221 221);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -21,13 +31,13 @@ header {
 .logo-circle {
     width: 40px;
     height: 40px;
-    background-color: #0A0F4C;
+    background-color: var(--primary-color);
     border-radius: 50%;
     margin-right: 10px;
 }
 
 .logo-text {
-    color: #0A0F4C;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 24px;
 }
@@ -40,7 +50,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--secondary-text-color);
 }
 
 main {
@@ -55,7 +65,7 @@ main {
 }
 
 h1 {
-    color: #0A0F4C;
+    color: var(--primary-color);
     font-size: 48px;
     margin-bottom: 10px;
 }
@@ -67,8 +77,8 @@ p {
 }
 
 button {
-    background-color: #FF5C00;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -78,8 +88,8 @@ button {
 .image-placeholder {
     flex: 1;
     height: 300px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: var(--primary-container);
+    border: 1px solid var(--primary-border);
 }
 
 @media (max-width: 768px) {
