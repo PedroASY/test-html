@@ -4,90 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulls Energy</title>
-    <link rel="stylesheet" href="public/css/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
-        <div class="logo">
-            <div class="logo-circle"></div>
-            <span class="logo-text">Bulls Energy</span>
+        <div class="header-logo">
+            <img src="imagenes/logo_bulls_1.png" alt="Logo de Bulls Energy" class="header__logo-img">
         </div>
         <nav>
             <ul>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#products">Productos</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contáctanos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="#soluciones" class="submenu-button">Soluciones</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#productos-estandar">Productos Estándar</a></li>
+                        <li><a href="#soluciones-personalizadas">Soluciones Personalizadas</a></li>
+                        <li><a href="#asesoria-tecnica">Asesoría Técnica</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#aplicaciones" class="submenu-button">Aplicaciones</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#marine">Marina</a></li>
+                        <li><a href="#vehiculos">Vehículos eléctricos</a></li>
+                        <li><a href="#industrial">Industrial</a></li>
+                    </ul>
+                </li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="content">
             <h1>Battery LiFePO4</h1>
-            <p>Energía confiable e impulsada por innovación.</p>
+            <p>Energía confiable, impulsada por innovación.</p>
             <button>Ver más</button>
         </div>
-        <div class="image-placeholder">
+        <div class="main-image">
+            <img src="imagenes/bateria-salar.png" alt="Batería LiFePO4 principal">
         </div>
-    </main>
 
-    <section class="contact" id="contact"> 
-        <div class="container">
-            <div class="container">
-                <h2 class="section-title">Contáctanos</h2>
-                <p>Si estas interesado en nuestros servicios o productos y requieres una atención más personalizada.</p>
-                <div class="contact-grid">
-                    <form action="#" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Nombre" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="E-mail" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Mensaje" class="form-input" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar mensaje</button>
-                    </form>
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <h4>E-mail</h4>
-                            <p>servicioalcliente@bullsenergy.com</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Teléfono</h4>
-                            <p>+57 (301) 3304139</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Dirección</h4>
-                            <p>Cra 21 N 25 - 22 Bucaramanga, Santander, Colombia</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Redes Sociales</h4>
-                            <div class="social-links">
-                                <a href="#facebook" class="social-link"><svg fill="#081044" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
-                                    <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 25.832031 46 A 1.0001 1.0001 0 0 0 26.158203 46 L 31.832031 46 A 1.0001 1.0001 0 0 0 32.158203 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 33 44 L 33 30 L 36.820312 30 L 38.220703 23 L 33 23 L 33 21 C 33 20.442508 33.05305 20.398929 33.240234 20.277344 C 33.427419 20.155758 34.005822 20 35 20 L 38 20 L 38 14.369141 L 37.429688 14.097656 C 37.429688 14.097656 35.132647 13 32 13 C 29.75 13 27.901588 13.896453 26.71875 15.375 C 25.535912 16.853547 25 18.833333 25 21 L 25 23 L 22 23 L 22 30 L 25 30 L 25 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 32 15 C 34.079062 15 35.38736 15.458455 36 15.701172 L 36 18 L 35 18 C 33.849178 18 32.926956 18.0952 32.150391 18.599609 C 31.373826 19.104024 31 20.061492 31 21 L 31 25 L 35.779297 25 L 35.179688 28 L 31 28 L 31 44 L 27 44 L 27 28 L 24 28 L 24 25 L 27 25 L 27 21 C 27 19.166667 27.464088 17.646453 28.28125 16.625 C 29.098412 15.603547 30.25 15 32 15 z"></path>
-                                    </svg></a>
-                                <a href="#x" class="social-link"><svg fill="#081044" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
-                                    <path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
+        <!-- Sección Nosotros -->
+        <section id="nosotros" class="nosotros-section">
+            <div class="nosotros-container">
+                <div class="nosotros-imagen">
+                    <img src="imagenes/leonardo-battery-1.png.jpg" alt="Bulls Energy Tecnología">
+                </div>
+                <div class="nosotros-contenido">
+                    <h2>ACERCA DE NOSOTROS</h2>
+                    <p>Con más de cuatro años de experiencia en tecnología IoT y sistemas de almacenamiento de energía, en Bulls Energy diseñamos y fabricamos baterías LiFePO4 de alta calidad, ofreciendo soluciones personalizadas para cada cliente. Nos especializamos en desarrollar productos avanzados con herramientas IIoT, aprovechando su bajo costo, seguridad e interoperabilidad para brindar soluciones eficientes de monitoreo y control remoto, adaptadas a las necesidades específicas de cada aplicación.</p>
+                </div>
+            </div>        
+        </section>
+
+        <!-- Sección Soluciones -->
+        <section id="soluciones">
+            <h2>Nuestras Soluciones</h2>
+            <div class="soluciones-grid">
+                <!-- Tarjeta 1 -->
+                <div id="productos-estandar" class="solucion-card">
+                    <div class="solucion-icon">📦</div>
+                    <h3>Productos Estándar</h3>
+                    <p>Baterías LiFePO4 de alta calidad con especificaciones estandarizadas para diversas aplicaciones.</p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div id="soluciones-personalizadas" class="solucion-card">
+                    <div class="solucion-icon">⚡</div>
+                    <h3>Soluciones Personalizadas</h3>
+                    <p>Desarrollo de sistemas de almacenamiento de energía adaptados a tus necesidades específicas.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div id="asesoria-tecnica" class="solucion-card">
+                    <div class="solucion-icon">👨‍💻</div>
+                    <h3>Asesoría Técnica</h3>
+                    <p>Acompañamiento experto en la selección, implementación y mantenimiento de tu sistema de energía.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Aplicaciones -->
+        <section id="aplicaciones" class="aplicaciones-section">
+            <div class="aplicacion-card marina" id="marine">
+                <div class="aplicacion-content">
+                    <h2>Marina</h2>
+                    <p>Baterías LiFePO4 diseñadas para aplicaciones marinas, nuestras baterías de fosfato de hierro y litio de ciclo profundo brindan una alta seguridad y un mayor tiempo de funcionamiento, ideales para aplicaciones marinas, como motores de pesca de arrastre, veleros, kayaks, barcos pesqueros, catamaranes, entre otros.  Se pueden producir baterías de LiFePO4, de 50Ah, 105Ah y 180Ah , adaptadas a los sistemas convencionales de voltaje marino como 12Vdc o 24Vdc. </p>
+                </div>
+                <div class="aplicacion-imagen">
+                    <img src="imagenes/boat-3643085_640.jpg" alt="Aplicación Marina">
+                </div>
+            </div>
+
+            <!-- Para Vehículos -->
+            <div class="aplicacion-card vehiculos" id="vehiculos">
+                <div class="aplicacion-content">
+                    <h2>Vehículos Eléctricos Ligeros</h2>
+                    <p>En Bulls Energy, ofrecemos una amplia gama de baterías basadas en tecnología de fosfato de hierro y litio, diseñadas para transformar su negocio en el sector de vehículos eléctricos ligeros. Nuestras baterías combinan seguridad, eficiencia y potencia, adaptándose a las necesidades de carritos de golf, scooters de movilidad, vehículos utilitarios,  vehículos de guiado automático y otras aplicaciones de tracción. Disponibles en capacidades de 12V, 24V, 36V y 48V, con opciones personalizadas para ofrecer un rendimiento óptimo según sus requerimientos específicos.
+                    </p>
+                </div>
+                <div class="aplicacion-imagen">
+                    <img src="imagenes/aplicaciones-leonardo-1.jpg" alt="Aplicación Vehículos">
+                </div>
+            </div>
+
+            <!-- Para Industria -->
+            <div class="aplicacion-card industrial" id="industrial">
+                <div class="aplicacion-content">
+                    <h2>Montacargas y Carretillas Elevadoras</h2>
+                    <p>Las baterías de litio Bulls Energy son ideales para equipos industriales como carretillas elevadoras, vehículos autoguiados y apiladores. Diseñadas para aplicaciones de alta demanda y turnos múltiples, ofrecen mayor seguridad, densidad energética y una vida útil más larga que las baterías de plomo-ácido, mejorando así la productividad en entornos de trabajo exigentes.
+                    </p>
+                </div>
+                <div class="aplicacion-imagen">
+                    <img src="imagenes/montacargas-1.webp" alt="Aplicación en Industria">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sección de Equipo -->
+        <section id="equipo" class="equipo-section">
+            <h2>Liderazgo</h2>
+            <div class="equipo-grid">
+
+                <div class="equipo-item">
+                    <div class="equipo-imagen">
+                        <img src="imagenes/sijon-1.jpg" alt="Sijón E. Ji">
                     </div>
+                    <div class="equipo-info">
+                        <h3>Sijón E. Ji</h3>
+                        <p class="cargo">COO</p>
+                        <p class="descripcion">Sr. Sijón tiene 35 años de experiencia en desarrollo, fabricación y manufactura. Sijón encabeza los esfuerzos de nuestro equipo de ingeniería para brindar soluciones confiables y de vanguardia a nuestros clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="equipo-item">
+                    <div class="equipo-imagen">
+                        <img src="imagenes/claudia-1.png" alt="Claudia L. Moreno">
+                    </div>
+                    <div class="equipo-info">
+                        <h3>Claudia L. Moreno</h3>
+                        <p class="cargo">Fundador & CEO</p>
+                        <p class="descripcion">Claudia desde hace 4 años se ha dedicado e investigado en el sector de baterías LiFePO4. Ella es la fundadora y directora ejecutiva de Bulls Energy.</p>
+                    </div>
+                </div>
+
+            </div>
+         </section>
+
+        <!-- Sección de Formulario -->
+         <section id="contacto" class="contacto-section">
+            <div class="contacto-header">
+                <h2>Contáctenos</h2>
+                <p>Póngase en contacto con nuestros expertos en baterías hoy mismo.</p>
+            </div>
+            
+            <form class="contacto-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido*</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa*</label>
+                        <input type="text" id="empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">País*</label>
+                        <select id="pais" required>
+                            <option value="">Seleccione un país</option>
+                            <option value="CO">Colombia</option>
+                            <!-- Falta añadir más países o revisar otra forma mas rápida -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="medio-contacto">Medio de contacto preferido*</label>
+                        <select id="medio-contacto" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="email">Email</option>
+                            <option value="telefono">Teléfono</option>
+                            <option value="whatsapp">WhatsApp</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horario de contacto preferido*</label>
+                        <select id="horario" required>
+                            <option value="">Seleccione un horario</option>
+                            <option value="manana">Mañana (8:00 AM - 12:00 PM)</option>
+                            <option value="tarde">Tarde (2:00 PM - 6:00 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="requerimiento">¿Cuál es su requerimiento?</label>
+                    <textarea id="requerimiento" rows="4"></textarea>
+                </div>
+         
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="acepto" required>
+                    <label for="acepto">Acepto recibir comunicaciones de Bulls Energy.</label>
+                </div>
+         
+                <button type="submit" class="submit-btn">Enviar mensaje</button>
+            </form>
+         </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/BULLS-ENERGY-LOGO2.png" alt="Bulls Energy Logo">
+            </div>
+            
+            <div class="footer-links">
+                <a href="#contacto">Contáctanos</a>
+                <a href="#terms">Términos y Condiciones</a>
+                <a href="#privacy">Política de Privacidad</a>
+            </div>
+     
+            <div class="footer-contact">
+                <p>+57 (301) 3304139</p>
+                <p>bullsenergy@outlook.com</p>
+            </div>
+     
+            <div class="footer-social">
+                <h4>SÍGUENOS EN REDES SOCIALES</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <a href="https://wa.me/573013304139?text=Estoy%20interesado%20en%20saber%20más%20de%20los%20productos%20de%20Bulls%20Energy" class="whatsapp-button" target="_blank">
-        <i class="fab"><svg fill="#fafafa" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 32 32">
-            <path fill-rule="evenodd" d="M 24.503906 7.503906 C 22.246094 5.246094 19.246094 4 16.050781 4 C 9.464844 4 4.101563 9.359375 4.101563 15.945313 C 4.097656 18.050781 4.648438 20.105469 5.695313 21.917969 L 4 28.109375 L 10.335938 26.445313 C 12.078125 27.398438 14.046875 27.898438 16.046875 27.902344 L 16.050781 27.902344 C 22.636719 27.902344 27.996094 22.542969 28 15.953125 C 28 12.761719 26.757813 9.761719 24.503906 7.503906 Z M 16.050781 25.882813 L 16.046875 25.882813 C 14.265625 25.882813 12.515625 25.402344 10.992188 24.5 L 10.628906 24.285156 L 6.867188 25.269531 L 7.871094 21.605469 L 7.636719 21.230469 C 6.640625 19.648438 6.117188 17.820313 6.117188 15.945313 C 6.117188 10.472656 10.574219 6.019531 16.054688 6.019531 C 18.707031 6.019531 21.199219 7.054688 23.074219 8.929688 C 24.949219 10.808594 25.980469 13.300781 25.980469 15.953125 C 25.980469 21.429688 21.523438 25.882813 16.050781 25.882813 Z M 21.496094 18.445313 C 21.199219 18.296875 19.730469 17.574219 19.457031 17.476563 C 19.183594 17.375 18.984375 17.328125 18.785156 17.625 C 18.585938 17.925781 18.015625 18.597656 17.839844 18.796875 C 17.667969 18.992188 17.492188 19.019531 17.195313 18.871094 C 16.894531 18.722656 15.933594 18.40625 14.792969 17.386719 C 13.90625 16.597656 13.304688 15.617188 13.132813 15.320313 C 12.957031 15.019531 13.113281 14.859375 13.261719 14.710938 C 13.398438 14.578125 13.5625 14.363281 13.710938 14.1875 C 13.859375 14.015625 13.910156 13.890625 14.011719 13.691406 C 14.109375 13.492188 14.058594 13.316406 13.984375 13.167969 C 13.910156 13.019531 13.3125 11.546875 13.0625 10.949219 C 12.820313 10.367188 12.574219 10.449219 12.390625 10.4375 C 12.21875 10.429688 12.019531 10.429688 11.820313 10.429688 C 11.621094 10.429688 11.296875 10.503906 11.023438 10.804688 C 10.75 11.101563 9.980469 11.824219 9.980469 13.292969 C 9.980469 14.761719 11.050781 16.183594 11.199219 16.382813 C 11.347656 16.578125 13.304688 19.59375 16.300781 20.886719 C 17.011719 21.195313 17.566406 21.378906 18 21.515625 C 18.714844 21.742188 19.367188 21.710938 19.882813 21.636719 C 20.457031 21.550781 21.648438 20.914063 21.898438 20.214844 C 22.144531 19.519531 22.144531 18.921875 22.070313 18.796875 C 21.996094 18.671875 21.796875 18.597656 21.496094 18.445313 Z"></path>
-            </svg></i>
-    </a>
-
+     
+        <div class="footer-bottom">
+            <p>Bulls Energy - Todos los derechos reservados</p>
+        </div>
+     </footer>
+    
 </body>
 </html>
