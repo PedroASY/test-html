@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulls Energy</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <header>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="header-logo">
             <img src="imagenes/logo_bulls_1.png" alt="Logo de Bulls Energy" class="header__logo-img">
         </div>
         <nav>
             <ul>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#nosotros" class="item-nav submenu-button">Nosotros</a></li>
                 <li class="dropdown">
-                    <a href="#soluciones" class="submenu-button">Soluciones</a>
+                    <a href="#soluciones" class="item-nav submenu-button">Soluciones</a>
                     <ul class="dropdown-content">
-                        <li><a href="#productos-estandar">Productos Estándar</a></li>
-                        <li><a href="#soluciones-personalizadas">Soluciones Personalizadas</a></li>
-                        <li><a href="#asesoria-tecnica">Asesoría Técnica</a></li>
+                        <li><a href="#productos-estandar" class="item-nav">Productos Estándar</a></li>
+                        <li><a href="#soluciones-personalizadas" class="item-nav">Soluciones Personalizadas</a></li>
+                        <li><a href="#asesoria-tecnica" class="item-nav">Asesoría Técnica</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#aplicaciones" class="submenu-button">Aplicaciones</a>
+                    <a href="#aplicaciones" class="item-nav submenu-button">Aplicaciones</a>
                     <ul class="dropdown-content">
-                        <li><a href="#marine">Marina</a></li>
-                        <li><a href="#vehiculos">Vehículos eléctricos</a></li>
-                        <li><a href="#industrial">Industrial</a></li>
+                        <li><a href="#marine" class="item-nav">Marina</a></li>
+                        <li><a href="#vehiculos" class="item-nav">Vehículos eléctricos</a></li>
+                        <li><a href="#industrial" class="item-nav">Industrial</a></li>
                     </ul>
                 </li>
-                <li><a href="#equipo">Equipo</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
+                <li><a href="#equipo" class="item-nav">Equipo</a></li>
+                <li><a href="#contacto" class="item-nav">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
@@ -268,5 +272,6 @@
         </div>
      </footer>
     
+     <script src="main.js"></script>
 </body>
 </html>

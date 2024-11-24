@@ -96,7 +96,19 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul a {
+    text-decoration: none;
+
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 nav a {
@@ -106,6 +118,24 @@ nav a {
 
 nav a:hover {
     color: var(--highlight-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.5rem;
+    height: 1.2rem;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--text-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
 }
 
 /* Contenido principal */
@@ -178,7 +208,8 @@ main {
 /* Responsivo para dispositivos móviles */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
         padding: 1rem;
         text-align: center;
     }
@@ -199,6 +230,37 @@ main {
 
     .main-image {
         margin-top: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0.3rem 0.6rem var(--box-shadow);
+        display: none;
+        z-index: 100;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul a {
+        padding: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
     }
 }
 
